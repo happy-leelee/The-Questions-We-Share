@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>질문의 장 — The Questions We Share</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet" /><link rel="stylesheet" href="style.css" /></head>
+<body data-page="constellation"><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark"></span><span>The Questions We Share</span></a><nav><a href="shelf.html">나의 서재</a><a class="active" href="constellation.html">질문의 장</a></nav></header>
+<main><section class="page-intro map-page-intro"><p class="eyebrow">02 · 질문에서 사람으로</p><h1>어떤 질문으로<br />대화하고 싶나요?</h1><p>원의 크기는 이 주제에 모인 질문 수를 보여줍니다. 함께 생각을 이어갈 수 있는 질문을 찾아보세요.</p><div class="map-stats"><span><strong id="question-total">0</strong> 질문</span><span><strong id="work-total">0</strong> 작품</span><span><strong id="theme-total">0</strong> 주제</span></div></section>
+
+<section class="quick-question-card"><div><p class="eyebrow">바로 질문하기</p><h2>연관된 작품이 없어도 떠오른 질문을 남겨보세요.</h2></div><form id="quick-question-form" class="quick-question-form"><label class="sr-only" for="map-question-input">대화해보고 싶은 질문</label><textarea id="map-question-input" rows="2" maxlength="240" placeholder="지금 다른 사람과 논의해보고 싶은 질문은 무엇인가요?" required></textarea><div><span id="map-question-count">0 / 240</span><button class="primary-button" type="submit">추가하기 →</button></div><p id="map-question-message" class="form-message" aria-live="polite"></p></form></section>
+
+<section class="constellation-panel full-map"><div class="panel-topline"><span>관심 주제를 선택하면 관련 질문 목록을 볼 수 있어요</span><span class="legend"><i class="large-category-dot"></i> 질문이 많음 <i class="glow-category-dot"></i> 최근 활동</span></div><div id="constellation" class="constellation interest-field"><svg id="constellation-svg" viewBox="0 0 1000 720" preserveAspectRatio="xMidYMid meet" aria-label="사람들의 질문이 주제별로 모인 인터랙티브 지도"></svg><div id="node-tooltip" class="node-tooltip" hidden></div></div><div id="category-detail" class="category-detail" hidden><div class="category-detail-heading"><div><span>선택한 질문의 주제</span><h2 id="selected-category-name"></h2></div><p id="selected-category-strength"></p></div><p class="category-instruction">질문 하나를 선택하면, 비슷한 질문을 갖은 독자를 찾을 수 있습니다.</p><div id="category-question-list" class="category-question-list"></div></div><div id="keyword-list" class="keyword-list"></div></section>
+
+<section id="connection-lab" class="connection-lab" aria-live="polite">
+  <div class="connection-heading"><div><p class="eyebrow">AI가 발견한 대화의 가능성</p><h2>함께 이야기해볼 질문</h2></div></div>
+  <div id="connection-empty" class="connection-empty"><span>✦</span><p>지도에서 질문 하나를 골라보세요.</p><button id="try-sample-connection" class="secondary-page-button" type="button">예시 보기</button></div>
+  <div id="connection-result" class="connection-result" hidden>
+    <div class="question-pair">
+      <article class="connection-question connection-question-you"><div class="profile-row"><div id="source-avatar" class="profile-avatar" aria-hidden="true"></div><div><strong id="source-person"></strong><p id="source-work"></p></div></div><blockquote id="source-question"></blockquote></article>
+      <div class="thread-mark" aria-hidden="true"><span></span><b>이어질<br />질문</b><span></span></div>
+      <article class="connection-question connection-question-other"><div class="profile-row"><div id="match-avatar" class="profile-avatar" aria-hidden="true"></div><div><strong id="match-person"></strong><p id="match-work"></p></div></div><blockquote id="match-question"></blockquote></article>
+    </div>
+    <div class="conversation-bridge"><span>AI가 제안하는 대화 상대</span><p id="connection-reason-copy"></p><div id="connection-themes" class="connection-themes"></div><div class="suggested-opening"><small>이렇게 시작해보세요</small><p id="opening-question"></p></div></div>
+    <div class="start-chat-wrap"><button id="start-chat" class="primary-button" type="button">대화 시작하기 <span aria-hidden="true">→</span></button><p id="chat-message" class="form-message"></p></div>
+  </div>
+</section>
+<div class="page-actions"><a class="secondary-page-button" href="shelf.html">← 작품과 질문 기록하기</a><a class="primary-button" href="shelf.html#my-question-themes">내 질문의 대주제 보기 →</a></div></main>
+<footer><p>The Questions We Share· 질문의 장/p></footer><script src="script.js"></script></body></html>
